@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebad del documento GifGridItem.js Debe mostrar correctamente el HTML con su propiedades 1`] = `
+<div
+  className="card animate__animated animate__fadeIn"
+>
+  <img
+    alt="hola"
+    src="http://localhost:8080/images.png"
+  />
+  <p>
+     
+    hola
+     
+  </p>
+</div>
+`;
