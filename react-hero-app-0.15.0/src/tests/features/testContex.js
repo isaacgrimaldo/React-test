@@ -7,3 +7,10 @@ export  const testContext = {
         name:'Isaac'
     }
 };
+
+export  const history = {
+    length: 10,
+    push: jest.fn(),
+    goBack: jest.fn(),
+    replace: jest.fn(),
+}
