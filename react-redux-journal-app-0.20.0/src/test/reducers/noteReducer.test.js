@@ -36,7 +36,7 @@ describe('Pruebas del archivo noteReducer.js', () => {
          expect(state.active).toEqual(testNote);
     });
 
-    test('Debe de realizar la acción de notesAddNew y cambiar el esto de la aplicación', () => {
+    test('Debe de realizar la acción de notesAddNew y cambiar el estado de la aplicación', () => {
         
         const initialState = {
             notes: testNotes ,
@@ -59,7 +59,7 @@ describe('Pruebas del archivo noteReducer.js', () => {
          ])
     });
 
-    test('Debe de realizar la acción de notesLoad y cambiar el esto de la aplicación', () => {
+    test('Debe de realizar la acción de notesLoad y cambiar el estado de la aplicación', () => {
         
         const initialState = {
             notes: [] ,
@@ -77,7 +77,7 @@ describe('Pruebas del archivo noteReducer.js', () => {
          expect(notes).toEqual(testNotes);
     });
 
-    test('Debe de realizar la acción de notesUpdated y cambiar el esto de la aplicación', () => {
+    test('Debe de realizar la acción de notesUpdated y cambiar el estado de la aplicación', () => {
         
         const initialState = {
             notes: testNotes ,
@@ -110,7 +110,7 @@ describe('Pruebas del archivo noteReducer.js', () => {
          expect(notechanged).toEqual([testUploadNote]);
     });
 
-    test('Debe de realizar la acción de notesDelete y cambiar el esto de la aplicación', () => {
+    test('Debe de realizar la acción de notesDelete y cambiar el estado de la aplicación', () => {
         
         const initialState = {
             notes: testNotes ,
@@ -131,7 +131,7 @@ describe('Pruebas del archivo noteReducer.js', () => {
          expect(noteDeleted).toEqual([]);
     });
 
-    test('Debe de realizar la acción de notesLogoutCleaning y cambiar el esto de la aplicación', () => {
+    test('Debe de realizar la acción de notesLogoutCleaning y cambiar el estado de la aplicación', () => {
         
         const initialState = {
             notes: testNotes ,

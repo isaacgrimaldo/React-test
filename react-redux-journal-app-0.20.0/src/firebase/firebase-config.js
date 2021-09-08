@@ -3,18 +3,36 @@ import 'firebase/firestore'
 import  'firebase/auth';
 
 const firebaseConfig = {
-    apiKey: "AIzaSyCyhrSxhAXteMuo2qhrsi49-0DENfOuFgw",
-    authDomain: "fir-react-37382.firebaseapp.com",
-    databaseURL: "https://fir-react-37382-default-rtdb.firebaseio.com",
-    projectId: "fir-react-37382",
-    storageBucket: "fir-react-37382.appspot.com",
-    messagingSenderId: "1085112619360",
-    appId: "1:1085112619360:web:817208f1d4228c02c84e05",
-    measurementId: "G-GB441M2R9W"
+    apiKey:process.env.REACT_APP_FIRE_BASE_API_KEY,
+    authDomain:process.env.REACT_APP_FIRE_BASE_AUTHDOMAIN,
+    databaseURL:process.env.REACT_APP_FIRE_BASE_DATABASEURL,
+    projectId:process.env.REACT_APP_FIRE_BASE_PROJECTID,
+    storageBucket:process.env.REACT_APP_FIRE_BASE_STORAGEBUCKET,
+    messagingSenderId:process.env.REACT_APP_FIRE_BASE_MESSAGINGSENDERID,
+    appId:process.env.REACT_APP_FIRE_BASE_APP_ID,
+    measurementId:process.env.REACT_APP_FIRE_BASE_MEASUREMENT_ID
   };
+  
+  
+
+  const firebaseConfigTest = {
+        apiKey: process.env.REACT_APP_FIRE_BASE_API_KEY,
+        authDomain: process.env.REACT_APP_FIRE_BASE_AUTHDOMAIN,
+        projectId: process.env.REACT_APP_FIRE_BASE_PROJECTID,
+        storageBucket: process.env.REACT_APP_FIRE_BASE_STORAGEBUCKET,
+        messagingSenderId: process.env.REACT_APP_FIRE_BASE_MESSAGINGSENDERID,
+        appId: process.env.REACT_APP_FIRE_BASE_APP_ID,
+        measurementId: process.env.REACT_APP_FIRE_BASE_MEASUREMENT_ID
+  }
+
+  if(process.env.NODE_ENV === 'test'){
+    firebase.initializeApp(firebaseConfigTest);
+}else{
+   firebase.initializeApp(firebaseConfig);
+  }
+
 
   // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
 
  //para grabar informacion 
  const db = firebase.firestore();
